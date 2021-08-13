@@ -2,7 +2,7 @@
   <div class="mt-3">
     <div class="card">
       <h4 class="p-3">{{ titre }}</h4>
-      <button class="btn btn-danger" @click="delTask">X</button>
+      <button class="btn btn-danger" @click="deleteTask">X</button>
     </div>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
   data() {
     return {};
   },
-  props: ["titre"],
+  props: ["titre", "deleteTask"],
   methods: {
     delTask: function() {
       this.$emit("delTask", this.titre);

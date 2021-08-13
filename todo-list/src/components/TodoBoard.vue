@@ -18,7 +18,8 @@
         v-bind:key="index"
         v-for="(task, index) in titre"
         :titre="task"
-        v-on:delTask="deleteTask($event)"
+        :id="index"
+        :deleteTask="deleteTask"
       ></task>
     </div>
   </div>
@@ -43,9 +44,8 @@ export default {
       this.titre.push(this.action);
       this.action = "";
     },
-    deleteTask: function(taskTitle) {
-      console.log(taskTitle);
-      this.titre.splice(this.titre.indexOf(taskTitle), 1);
+    deleteTask: function(e) {
+      this.titre.splice(e.target.parentNode.parentNode.id, 1);
     },
   },
 };
