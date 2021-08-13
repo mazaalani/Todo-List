@@ -41,6 +41,7 @@ export default {
   methods: {
     createTask: function() {
       this.titre.push(this.action);
+      this.action = "";
     },
     deleteTask: function(taskTitle) {
       console.log(taskTitle);

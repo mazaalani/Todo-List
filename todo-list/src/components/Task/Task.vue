@@ -1,7 +1,7 @@
 <template>
   <div class="mt-3">
     <div class="card">
-      <h3 class="p-3">{{ titre }}</h3>
+      <h4 class="p-3">{{ titre }}</h4>
       <button class="btn btn-danger" @click="delTask">X</button>
     </div>
   </div>
